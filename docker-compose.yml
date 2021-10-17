@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  nvim:
+    build: .
+    volumes:
+      - ./init.vim:/root/.config/nvim/init.vim
+      - ./lua:/root/.config/nvim/lua
