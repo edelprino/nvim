@@ -1,0 +1,59 @@
+{
+  "if": {
+    "prefix": ["if"],
+    "body": [
+      "if (${1:condition}) {",
+      "\t${0:# code...}",
+      "}"
+    ],
+    "description": "Base if"
+  },
+  "Class constructor": {
+    "prefix": "pubc",
+    "body": [
+        "public function __construct(${1:Type} \\$${2:args})",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Class public constructor block"
+  },
+  "Public method": {
+      "prefix": "pubf",
+      "body": [
+          "public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+          "{",
+          "\t${0:# code...}",
+          "}"
+      ],
+      "description": "Public method block"
+  },
+  "Private method": {
+      "prefix": "prif",
+      "body": [
+          "private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+          "{",
+          "\t${0:# code...}",
+          "}"
+      ],
+      "description": "Private method block"
+  },
+  "Foreach ... key ... item": {
+      "prefix": "forek",
+      "body": [
+          "foreach (\\$${1:iterable} as \\$${2:key} => \\$${3:item}) {",
+          "\t${0:# code...}",
+          "}"
+      ],
+      "description": "Foreach as $key => $item block"
+  },
+  "Foreach loop": {
+      "prefix": "fore",
+      "body": [
+          "foreach (\\$${1:iterable} as \\$${2:item}) {",
+          "\t${0:# code...}",
+          "}"
+      ],
+      "description": "Foreach as $item block"
+  }
+}

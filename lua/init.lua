@@ -57,12 +57,21 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-
+-- TODO: lsp config for cmp integration
+-- require('lspconfig')[%YOUR_LSP_SERVER%].setup {
+--   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- }
 local cmp = require'cmp'
 cmp.setup{
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end
+  },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'vsnip' },
   },
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({ select = true }),

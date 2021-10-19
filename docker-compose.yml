@@ -6,3 +6,4 @@ services:
       - ./init.vim:/root/.config/nvim/init.vim
       - ./plugins.vim:/root/.config/nvim/plugins.vim
       - ./lua:/root/.config/nvim/lua
+      - ./snippets:/root/.config/nvim/snippets

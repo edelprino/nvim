@@ -4,7 +4,7 @@ packloadall
 silent! helptags ALL
 
 lua require('init')
-
+let g:vsnip_snippet_dir = expand('~/.config/nvim/snippets')
 let g:CheatSheetStayInOrigBuf=0
 nnoremap gf <C-W>gf
 
@@ -20,6 +20,11 @@ hi CursorLineNr guibg=NONE ctermbg=NONE
 set shortmess+=c
 " set completeopt=menuone,noinsert,noselect
 set completeopt=menu,menuone,noselect
+
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
 augroup Terminal
   autocmd TermOpen * setlocal statusline=%{b:term_title}
