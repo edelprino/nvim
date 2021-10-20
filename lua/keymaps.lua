@@ -13,8 +13,6 @@ nmap('<C-A>', ':b#<cr>', 'Alternate file')
 nmap('<leader>t', ':TestNearest<cr>', 'Run test')
 nmap('<leader>tt', ':TestLast<cr>', 'Run last test runned')
 
-nmap('<leader>w', '<cmd>lua task_runner()<cr>', 'Task runner')
-
 nmap('<leader>e',  ':NERDTreeToggle %<CR>', 'File explorer')
 nmap('<leader>c', ':Commentary<CR>','Toggle comments into the code')
 
@@ -34,7 +32,6 @@ nmap('<leader>d', '<cmd>Telescope lsp_definitions<cr>', 'Class definition')
 nmap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', 'Rename variable')
 nmap('<leader>a', ':Lspsaga code_action<cr>', 'FuzzyFinder on contextual code actions')
 
-
 -- git actions
 nmap('<leader>gb', '<cmd>Telescope git_branches theme=dropdown<cr>', 'Git branches')
 nmap('<leader>gP', ':Git push<cr>', 'Git push')
@@ -46,3 +43,5 @@ nmap('<leader>f', ":silent exec 'https://www.google.com/search?q=probdafsdfasf'<
 
 -- Lower Row
 map('<leader>v', ':terminal<cr>')
+nmap('<leader>w', '<cmd>lua task_runner()<cr>', 'Task runner')
+nmap('<leader>td', '<cmd>lua todo_list()<cr>', 'Project TODO List')

@@ -21,6 +21,12 @@ function _G.map(keymap, command)
   vim.api.nvim_set_keymap('n', keymap, command, opt)
 end
 
+function _G.todo_list()
+  require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({
+    search = 'TODO'
+  }))
+end
+
 _G.keymaps = {}
 
 function _G.nmap(keymap, command, comment)
