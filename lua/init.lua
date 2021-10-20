@@ -39,6 +39,7 @@ require('lualine').setup {
 local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
+    color_devicons = true,
     mappings = {
       i = {
          ["<esc>"] = actions.close,

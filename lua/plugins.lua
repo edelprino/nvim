@@ -2,6 +2,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
 local Plug = vim.fn['plug#']
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'hoob3rt/lualine.nvim'
 
 Plug 'tpope/vim-fugitive'
