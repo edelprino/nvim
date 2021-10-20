@@ -34,11 +34,12 @@ function _G.vmap(keymap, command, comment)
   local opt = {silent = true, noremap = false}
   vim.api.nvim_set_keymap('v', keymap, command, opt)
 end
-
+-- TODO: Fix error on function call
 function _G.open_cheatsheet_with_keymaps()
   require'edelprino.telescope'.cheatsheet(_G.keymaps)
 end
 
+-- TODO: Fix error on function call
 function _G.task_runner()
   require'edelprino.telescope'.task_runner()
 end

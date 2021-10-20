@@ -13,8 +13,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'janko-m/vim-test'
+-- TODO: Fix global settings for vim test
 --global('test#strategy', 'neovim')
 --global('test#neovim#term_position', 'vert botright 100')
+
+-- TODO: Try: https://github.com/rcarriga/vim-ultest
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'folke/lsp-colors.nvim'

@@ -6,7 +6,10 @@ local action_state = require('telescope.actions.state')
 
 local M = {}
 
+-- TODO Trasformare questo modulo in estensioni telescope
+
 function M.tasks_runner()
+  -- TODO Ha senso rendere il comando "make help" configurabile?
   local finder = finders.new_oneshot_job(
     vim.tbl_flatten { "make", "help" }
   )
