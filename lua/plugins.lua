@@ -27,7 +27,7 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate'})
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug('dbeniamine/cheat.sh-vim')
+Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'preservim/nerdtree'
 

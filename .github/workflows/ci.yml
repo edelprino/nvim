@@ -1,0 +1,8 @@
+name: Continuous Integration
+on: [push, pull_requesta]
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v1
+    - name: Build the docker-compose stack
+      run: make build
