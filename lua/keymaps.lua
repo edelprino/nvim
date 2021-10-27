@@ -43,5 +43,5 @@ nmap('<leader>f', ":silent exec 'https://www.google.com/search?q=probdafsdfasf'<
 
 -- Lower Row
 map('<leader>v', ':terminal<cr>')
-nmap('<leader>w', '<cmd>lua tasks_runner()<cr>', 'Task runner')
+nmap('<leader>w', '<cmd>lua run_telescope_task_runner()<cr>', 'Task runner')
 nmap('<leader>td', '<cmd>lua todo_list()<cr>', 'Project TODO List')
