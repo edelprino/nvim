@@ -66,7 +66,7 @@ autocmd BufEnter _cheat map <Esc> :q<cr>
 autocmd BufLeave,FocusLost * silent! wall
 autocmd BufWritePost nvim/* source %
 autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-autocmd CursorHold *.* lua require'lspsaga.diagnostic'.show_line_diagnostics()
+autocmd CursorHold *.* lua vim.lsp.diagnostic.show_line_diagnostics()
 autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 300)
 
 command! -nargs=1 Google execute ':silent !open "http://www.google.com/search?q='.<q-args>.'"'
