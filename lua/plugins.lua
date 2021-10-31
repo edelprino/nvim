@@ -26,6 +26,8 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate'})
 
+Plug 'github/copilot.vim'
+
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
