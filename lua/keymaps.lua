@@ -33,10 +33,12 @@ nmap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', 'Rename variable')
 nmap('<leader>a', ':Telescope lsp_code_actions<cr>', 'FuzzyFinder on contextual code actions')
 
 -- git actions
-nmap('<leader>gb', '<cmd>Telescope git_branches theme=dropdown<cr>', 'Git branches')
+nmap('<leader>g', ':Git<cr>', 'Git open Fugitive')
+nmap('<leader>gb', ':Telescope git_branches theme=dropdown<cr>', 'Git branches')
 nmap('<leader>gP', ':Git push<cr>', 'Git push')
 nmap('<leader>gp', ':Git pull<cr>', 'Git pull')
-nmap('<leader>g', '<cmd>Git<cr>', 'Git open Fugitive')
+nmap('<leader>gr', ':Telescope gh run<cr>', 'Github Actions')
+nmap('<leader>gpr', ':Telescope gh pull_request<cr>', 'Github Pull Request')
 
 nmap('<leader>p', ":execute 'Cheat '.&filetype.' '.input('Cosa vuoi cercare? ')<cr>", 'Open cheat query')
 nmap('<leader>f', ":silent exec 'https://www.google.com/search?q=probdafsdfasf'<cr>", 'Search on google')
