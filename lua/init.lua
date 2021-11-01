@@ -30,6 +30,9 @@ require('plugins')
 require('keymaps')
 require('lsp')
 
+vim.g['test#strategy'] = 'neovim'
+vim.g['test#neovim#term_position'] = 'vert botright 100'
+
 require('lualine').setup {
   options = {
      theme = "powerline"

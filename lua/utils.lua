@@ -27,6 +27,13 @@ function _G.todo_list()
   }))
 end
 
+-- nmap('<leader>p', ":execute 'Cheat '.&filetype.' '.input('Cosa vuoi cercare? ')<cr>", 'Open cheat query')
+-- nmap('<leader>f', ":silent exec 'https://www.google.com/search?q=probdafsdfasf'<cr>", 'Search on google')
+
+function _G.search_on_google(query)
+  vim.cmd(string.format("silent !open https://www.google.com/search?q=%s", query))
+end
+
 _G.keymaps = {}
 
 function _G.nmap(keymap, command, comment)
