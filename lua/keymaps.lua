@@ -35,9 +35,9 @@ nmap('<leader>a', ':Telescope lsp_code_actions<cr>', 'FuzzyFinder on contextual 
 -- git actions
 nmap('<leader>g', ':Git<cr>', 'Git open Fugitive')
 nmap('<leader>gb', ':Telescope git_branches theme=dropdown<cr>', 'Git branches')
-nmap('<leader>gP', ':Git push<cr>', 'Git push')
-nmap('<leader>gp', ':Git pull<cr>', 'Git pull')
 nmap('<leader>gr', ':Telescope gh run<cr>', 'Github Actions')
+nmap('<leader>gps', ':Git push<cr>', 'Git push')
+nmap('<leader>gpl', ':Git pull<cr>', 'Git pull')
 nmap('<leader>gpr', ':Telescope gh pull_request<cr>', 'Github Pull Request')
 
 nmap('<leader>p', ":execute 'Cheat '.&filetype.' '.input('Cosa vuoi cercare? ')<cr>", 'Open cheat query')
