@@ -11,6 +11,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-github.nvim'
 
 Plug 'janko-m/vim-test'
 
