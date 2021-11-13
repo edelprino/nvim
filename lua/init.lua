@@ -60,10 +60,6 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
--- TODO: lsp config for cmp integration
--- require('lspconfig')[%YOUR_LSP_SERVER%].setup {
---   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- }
 local lspkind = require('lspkind')
 local cmp = require('cmp')
 cmp.setup{
@@ -81,9 +77,9 @@ cmp.setup{
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
   },
-  formatting = {
-    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-  }
+  -- formatting = {
+  --   format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+  -- }
 }
 
 require("bufferline").setup{}
