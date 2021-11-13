@@ -51,8 +51,7 @@ require('telescope').setup{
       }
     }
   },
-  pickers = {
-  },
+  pickers = { },
 }
 
 require'nvim-treesitter.configs'.setup {
@@ -65,7 +64,8 @@ require'nvim-treesitter.configs'.setup {
 -- require('lspconfig')[%YOUR_LSP_SERVER%].setup {
 --   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- }
-local cmp = require'cmp'
+local lspkind = require('lspkind')
+local cmp = require('cmp')
 cmp.setup{
   snippet = {
     expand = function(args)
@@ -81,6 +81,9 @@ cmp.setup{
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
   },
+  formatting = {
+    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+  }
 }
 
 require("bufferline").setup{}

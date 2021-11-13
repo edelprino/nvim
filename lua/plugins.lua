@@ -3,6 +3,8 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 local Plug = vim.fn['plug#']
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'onsails/lspkind-nvim'
+
 Plug 'hoob3rt/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 

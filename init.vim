@@ -48,15 +48,8 @@ augroup VisualActions
   vnoremap p "0p
 augroup END
 
-function! ConfirmQuit()
-    if (winnr('$')==1 && tabpagenr('$')==1)
-        if (confirm("Do you really want to quit?", "&Yes\n&No", 2)==1)
-            :quit
-        endif
-    else
-        :quit
-    endif
-endfunction
+imap <silent><script><expr> <SPACE><TAB> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
 
 set updatetime=1000
 
