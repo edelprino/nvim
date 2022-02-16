@@ -49,19 +49,31 @@ require('telescope').setup{
          ["<C-K>"] = actions.move_selection_previous,
          ["<C-J>"] = actions.move_selection_next,
       }
-    }
+    },
+    path_display={"tail"}
   },
-  pickers = { },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    },
+    lsp_references = {
+      theme = "dropdown",
+    },
+  },
 }
 
 require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
+  },
+  highlight = {
+    enable = true
   }
 }
 
-local lspkind = require('lspkind')
-local cmp = require('cmp')
+require'nvim-treesitter.install'.compilers = { "gcc" }
+
+local cmp = require'cmp'
 cmp.setup{
   snippet = {
     expand = function(args)
@@ -75,7 +87,14 @@ cmp.setup{
   },
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+    -- ['<Tab>'] = function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   else
+    --     fallback()
+    --   end
+    -- end
   },
   -- formatting = {
   --   format = lspkind.cmp_format({with_text = false, maxwidth = 50})

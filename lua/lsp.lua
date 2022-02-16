@@ -26,6 +26,32 @@ local lsp = require('lspconfig')
 --   end
 -- }
 
+
+vim.lsp.set_log_level("debug")
+
+-- local function hls_container(root_dir)
+--   local workdir = root_dir or vim.fn.getcwd()
+--   local root_stack_volume = "/Users/edelprino/.cache/haskell-lsp-stack/:/root/.stack/"
+--   local volume =  workdir..":"..workdir..":ro"
+--   return {
+--     "docker",
+--     "run",
+--     "--rm",
+--     "-i",
+--     "--volume="..volume,
+--     "--volume="..root_stack_volume,
+--     "--workdir="..workdir,
+--     "haskell-docker-lsp",
+--     "--lsp"
+--   }
+-- end
+
+-- lsp.hls.setup {
+--   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+--   -- cmd= { './bin/lsp', '--lsp' },
+--   cmd= hls_container(),
+-- }
+
 lsp.gopls.setup {}
 --- TODO: tsserver
 
