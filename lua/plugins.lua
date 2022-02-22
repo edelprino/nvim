@@ -43,4 +43,6 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
+Plug 'vmchale/dhall-vim'
+
 vim.call('plug#end')
