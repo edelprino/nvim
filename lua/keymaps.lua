@@ -5,10 +5,9 @@ nmap('<C-H>', '<cmd>lua open_cheatsheet_with_keymaps()<CR>', 'Show cheatsheet')
 
 nmap('<C-J>', ':bprevious<CR>', 'Previous buffer')
 nmap('<C-K>', ':bnext<CR>', 'Next buffer')
-nmap('<C-W>', ':bp<cr>:bd #<cr>', 'Close buffer') -- as in google chrome, keep consistency?
 nmap('<C-Q>', ':q<cr>', 'Close window') -- as in google chrome, keep consistency?
-nmap('<C-S>', '<C-W><C-W>', 'Switch between all split windows')
-nmap('<C-A>', ':b#<cr>', 'Alternate file')
+nmap('<CR>', '<C-W><C-W>', 'Switch between all split windows')
+nmap('<BS>', ':b#<cr>', 'Alternate file')
 
 nmap('<leader>t', ':TestNearest<cr>', 'Run test')
 nmap('<leader>tt', ':TestLast<cr>', 'Run last test runned')
