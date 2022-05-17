@@ -8,6 +8,8 @@ nmap('<C-K>', ':bnext<CR>', 'Next buffer')
 nmap('<C-Q>', ':q<cr>', 'Close window') -- as in google chrome, keep consistency?
 nmap('<CR>', '<C-W><C-W>', 'Switch between all split windows')
 nmap('<BS>', ':b#<cr>', 'Alternate file')
+nmap('<leader>sv', ':vsplit<cr>', 'Vertical split')
+nmap('<leader>sh', ':split<cr>', 'Horizontal split')
 
 nmap('<leader>t', ':TestNearest<cr>', 'Run test')
 nmap('<leader>tt', ':TestLast<cr>', 'Run last test runned')

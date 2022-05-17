@@ -33,9 +33,27 @@ require('lsp')
 vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'vert botright 100'
 
+local function get_lsp_client_names()
+    local clients = {}
+    for _, client in pairs(vim.lsp.buf_get_clients(0)) do
+        clients[#clients + 1] = client.name
+    end
+    return "[ " .. table.concat(clients, ", ") .. " ]"
+end
+
 require('lualine').setup {
   options = {
      theme = "powerline"
+  },
+  sections = {
+    lualine_x = {
+      {
+        get_lsp_client_names,
+        cond = function()
+          return next(vim.lsp.buf_get_clients(0)) ~= nil
+        end
+      }
+    }
   }
 }
 

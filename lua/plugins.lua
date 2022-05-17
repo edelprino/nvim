@@ -8,6 +8,8 @@ Plug 'onsails/lspkind-nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 
+Plug 'Yggdroot/indentLine'
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
