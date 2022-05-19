@@ -31,7 +31,7 @@ nmap('<leader>d', '<cmd>Telescope lsp_definitions<cr>', 'Class definition')
 
 -- Refactor action
 nmap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', 'Rename variable')
-nmap('<leader>a', ':Telescope lsp_code_actions<cr>', 'FuzzyFinder on contextual code actions')
+nmap('<leader>a', ':lua vim.lsp.buf.code_action()<cr>', 'FuzzyFinder on contextual code actions')
 
 -- git actions
 nmap('<leader>g', ':Git<cr>', 'Git open Fugitive')

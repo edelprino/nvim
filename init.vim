@@ -4,7 +4,7 @@ packloadall
 silent! helptags ALL
 
 lua require('init')
-" let g:vsnip_snippet_dir = expand('~/.config/nvim/snippets')
+let g:vsnip_snippet_dir = expand('~/.config/nvim/snippets')
 " let g:CheatSheetStayInOrigBuf=0
 nnoremap gf <C-W>gf
 

@@ -17,6 +17,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-github.nvim'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 Plug 'janko-m/vim-test'
 
@@ -44,6 +45,7 @@ Plug 'fatih/vim-go'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug('phpactor/phpactor', {['for']= 'php', ['tag'] = '*', ['do'] = 'composer install --no-dev -o'})
 
 Plug 'vmchale/dhall-vim'
 
